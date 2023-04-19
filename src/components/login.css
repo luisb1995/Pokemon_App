@@ -1,0 +1,98 @@
+.Container-login{
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    justify-items:center ;
+    overflow: hidden;
+}
+
+.rick-fondo{
+    width: 100%;
+   height: 100vh;
+}
+
+.Login-form{
+    width: 30%;
+    /* align-self: center; */
+    position: absolute;
+     margin-top: 20px; 
+    height: 55%;
+    background-color: rgba(38, 42, 86, 0.568);
+    border-radius: 8px ;
+    justify-content: center;
+
+}
+.T-form{
+    color: whitesmoke;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 30px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid rgb(246, 241, 241);
+    margin-bottom: 40px;
+}
+
+input{
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    margin-top: 25px;
+    height: 30px;
+    text-align: center;
+    border-radius:5px;
+    font-family: sans-serif;
+    outline: none;
+    
+    
+}
+img{
+    object-fit: cover;
+    width:100%;
+    height:100%;
+  }
+input:focus{
+    
+    outline: none;
+    border: 2px solid grey;
+}
+.btn-login{
+    display: block;
+    height: 30px;
+    width: 120px;
+    margin: 0 auto;
+    margin-top: 35px;
+}
+
+ @media screen and (max-width:1000px) {
+    .Login-form{
+        width: 40%;
+    }
+    
+}
+
+@media screen and (max-width:768px) {
+
+    .Login-form{
+        width: 60%;
+    }
+
+}
+
+@media screen and (max-width:500px) {
+
+    .Login-form{
+        width: 75%;
+    }
+
+}
+@media screen and (max-width:400px) {
+
+    .Login-form{
+        
+        width: 90%;
+        height: 19.5rem;
+    }
+
+} 
