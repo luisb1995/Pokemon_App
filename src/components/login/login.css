@@ -1,10 +1,12 @@
-.Container-login{
+ .Container-login{
     display: grid;
     width: 100%;
     height: 100vh;
     justify-items:center ;
     overflow: hidden;
-}
+    
+
+} 
 
 .rick-fondo{
     width: 100%;
@@ -13,7 +15,6 @@
 
 .Login-form{
     width: 30%;
-    /* align-self: center; */
     position: absolute;
      margin-top: 20px; 
     height: 55%;
@@ -24,8 +25,8 @@
 }
 .T-form{
     color: whitesmoke;
-    width: 50%;
     margin: 0 auto;
+    width: 50%;
     text-align: center;
     margin-top: 40px;
     font-size: 30px;
@@ -34,10 +35,10 @@
     margin-bottom: 40px;
 }
 
-input{
+.email, .password{
     display: block;
     margin: 0 auto;
-    width: 50%;
+    width: 60%;
     margin-top: 25px;
     height: 30px;
     text-align: center;
@@ -47,29 +48,43 @@ input{
     
     
 }
-img{
-    object-fit: cover;
+.rick-fondo{
+    object-fit: fill;
     width:100%;
-    height:100%;
+    height:100vh;
   }
-input:focus{
+  .email:focus{
+    outline: none;
+    border: 2px solid grey;
+  }
+.password:focus{
     
     outline: none;
     border: 2px solid grey;
 }
-.btn-login{
-    display: block;
-    height: 30px;
-    width: 120px;
-    margin: 0 auto;
-    margin-top: 35px;
+
+.iniciar{
+    display: flex;
+    width: 100%;
+    margin-top: 30px;
+    justify-content: center;
+  
 }
+
+.btn-light{
+    margin-top: 35px;
+    margin: 0 auto;
+  
+}
+
 
  @media screen and (max-width:1000px) {
     .Login-form{
         width: 40%;
     }
-    
+    .rick-fondo{
+        object-fit: cover;
+    }
 }
 
 @media screen and (max-width:768px) {

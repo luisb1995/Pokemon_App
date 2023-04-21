@@ -3,6 +3,12 @@
        align-items: center;
        background-image: url("../../assets/rick-y-morty3.jpg");
        background-size: contain;
+       min-height: 100vh;    
+}
+.carga{
+    color: white;
+    margin: 0 auto;
+    font-size: 36px;
 }
 .Container-cards{
     display: grid;
@@ -51,6 +57,7 @@
 }
 .titulo-img{
     height: 80px;
+    width: 250px;
 }
 .fondo{
     width: 100%;
@@ -60,11 +67,15 @@
 p span{
     font-weight: bold;
 }
+.btn-danger{
+    margin-left: 30px;
+}
 .card{
     display:inline-block;
     
     border: 2px solid rgb(87, 108, 188);
     width: 95%;
+    
     height: 100%;
     background-color: #c7f9cc;
     margin-bottom: 20px;
