@@ -2,6 +2,7 @@ import React from 'react'
 import Titulo from "../../assets/titulo.png"
 import {useState} from 'react'
 import "./estilos.css"
+import "../../App.css"
 import GetDatos from './GetDatos';
 import { Link } from 'react-router-dom';
 

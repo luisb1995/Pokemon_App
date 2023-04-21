@@ -199,6 +199,16 @@ align-self: center;
     justify-self: center;
    }
 }
+@media screen and (max-width:500px) {
+    
+    .titulo-img{
+      width: 90%;
+      margin-left: 0;
+      
+    }
+   
+}
+
 @media screen and (max-width:400px) {
 
     .card{
