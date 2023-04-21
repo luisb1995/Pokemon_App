@@ -1,12 +1,17 @@
 import { useState } from 'react'
+import GetDatos from './components/Rick-morty/GetDatos'
 import './App.css'
-import Login from './components/Login'
+import Nav from './components/Rick-morty/Nav'
+
+
 
 function App() {
 
   return (
     <div className="Container-App">
-        <Login/>
+        {/* <Login/> */}
+        <Nav/>
+        <GetDatos/>
     </div>
   )
 }
