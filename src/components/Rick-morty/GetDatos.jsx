@@ -4,7 +4,7 @@ import cards from "../../assets/rick-y-morty3.jpg";
 import "../../App.css";
 import Nav from "./Nav";
 
-function GetDatos() {
+function GetDatos({text}) {
 
   const [user, setUser] = useState([]);
   const [numPages, setNumpages] = useState(0);
@@ -26,7 +26,8 @@ function GetDatos() {
         setPrevius(!info.prev ? "" : info.prev)
         setNext(!info.next ? "":info.next)
 
-        setLoading(false)
+        setLoading(false)      
+         
         
   };
 
@@ -36,7 +37,10 @@ function GetDatos() {
     getUser();
   }, [url]);
   
-              
+      
+  const filteredUsers = user.filter((userss) =>
+  userss.name.toLowerCase().includes(text.toLowerCase())
+);      
   return (
     <>
 
@@ -65,11 +69,15 @@ function GetDatos() {
         </div>
 
         <div className="Container-cards">     
+        {
+            filteredUsers.length===0 &&
+            <h2>No hay resultados</h2>
+        }
           
           { 
-          
+              filteredUsers.length>0 &&
               loading ?  <p className="carga">Cargando...</p>  :
-                  user.map((dato, index) => (
+                  filteredUsers.map((dato, index) => (
                   <div key={dato.id} className="card">
                     <p className="c-name">{dato.name}</p>
                     
@@ -88,10 +96,13 @@ function GetDatos() {
                     </p>
                   </div>
                 ))   
+                
           }
-         </div>
+        
+          </div>
 
            <div className="botones btnabajo">
+         
                   <button
                           className="btn btn-secondary ant"
                           disabled={previus ? "" : true}
@@ -107,7 +118,7 @@ function GetDatos() {
                   >
                     Siguiente
                   </button>
-
+              
           </div>
 
       </div>

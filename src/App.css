@@ -8,7 +8,7 @@
 .Container-App{
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: auto ;
+    grid-template-rows: auto auto;
 }
  
 .Container-login{
@@ -34,6 +34,19 @@
   background: #0f0c29; 
 background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  
 background: linear-gradient(to right, #24243e, #302b63, #0f0c29); 
+}
+
+.contenedor{
+  grid-row-start: 2;
+  grid-row-end: 2;
+  
+}
+
+@media screen and (max-width:678px ){
+  
+    .contenedor{
+      margin-top: 100px;
+    }
 }
 
 

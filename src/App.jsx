@@ -8,14 +8,15 @@ import './App.css'
 
 
 function App() {
+  const [text,setText]=useState("");
 
-  {/* <Login/>  */}
   return (
     <>
         <div className="Container-App">
             <Routes>
 
-              <Route path='/home' element={<><Nav/> <GetDatos/></> }/>           
+              <Route path='/home' element={<><Nav text={text} setText={setText}/> <GetDatos text={text}/></> }/>      
+              {console.log(text)}     
               <Route path='/' element={<Login/>}/>   
             </Routes>
         </div>
